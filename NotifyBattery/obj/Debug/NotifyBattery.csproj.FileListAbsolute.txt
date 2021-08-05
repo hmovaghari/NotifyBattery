@@ -1,10 +1,10 @@
-c:\users\hmovaghari\documents\visual studio 2015\Projects\NotifyBattery\NotifyBattery\bin\Debug\NotifyBattery.exe.config
-c:\users\hmovaghari\documents\visual studio 2015\Projects\NotifyBattery\NotifyBattery\obj\Debug\NotifyBattery.csprojResolveAssemblyReference.cache
-c:\users\hmovaghari\documents\visual studio 2015\Projects\NotifyBattery\NotifyBattery\obj\Debug\NotifyBattery.Form1.resources
-c:\users\hmovaghari\documents\visual studio 2015\Projects\NotifyBattery\NotifyBattery\obj\Debug\NotifyBattery.Properties.Resources.resources
-c:\users\hmovaghari\documents\visual studio 2015\Projects\NotifyBattery\NotifyBattery\obj\Debug\NotifyBattery.csproj.GenerateResource.Cache
-c:\users\hmovaghari\documents\visual studio 2015\Projects\NotifyBattery\NotifyBattery\bin\Debug\NotifyBattery.exe
-c:\users\hmovaghari\documents\visual studio 2015\Projects\NotifyBattery\NotifyBattery\bin\Debug\NotifyBattery.pdb
-c:\users\hmovaghari\documents\visual studio 2015\Projects\NotifyBattery\NotifyBattery\obj\Debug\NotifyBattery.exe
-c:\users\hmovaghari\documents\visual studio 2015\Projects\NotifyBattery\NotifyBattery\obj\Debug\NotifyBattery.pdb
-c:\users\hmovaghari\documents\visual studio 2015\Projects\NotifyBattery\NotifyBattery\obj\Debug\NotifyBattery.Form2.resources
+D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\bin\Debug\NotifyBattery.exe.config
+D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\bin\Debug\NotifyBattery.exe
+D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\bin\Debug\NotifyBattery.pdb
+D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\obj\Debug\NotifyBattery.frmMain.resources
+D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\obj\Debug\NotifyBattery.frmSettings.resources
+D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\obj\Debug\NotifyBattery.Properties.Resources.resources
+D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\obj\Debug\NotifyBattery.csproj.GenerateResource.cache
+D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\obj\Debug\NotifyBattery.csproj.CoreCompileInputs.cache
+D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\obj\Debug\NotifyBattery.exe
+D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\obj\Debug\NotifyBattery.pdb

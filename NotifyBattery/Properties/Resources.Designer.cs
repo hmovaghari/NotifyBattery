@@ -19,7 +19,7 @@ namespace NotifyBattery.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -117,96 +117,6 @@ namespace NotifyBattery.Properties {
             get {
                 object obj = ResourceManager.GetObject("BatteryF", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Created by hmovaghari↵http://hmovaghari.rozblog.com.
-        /// </summary>
-        internal static string CreatedBY {
-            get {
-                return ResourceManager.GetString("CreatedBY", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Action Function when disconnect from Adapter.
-        /// </summary>
-        internal static string STRActionFUN {
-            get {
-                return ResourceManager.GetString("STRActionFUN", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to NotifyBattery.
-        /// </summary>
-        internal static string STRAppName {
-            get {
-                return ResourceManager.GetString("STRAppName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Battery is Low Level, Please connect to Adapter.
-        /// </summary>
-        internal static string STRChargeNeed {
-            get {
-                return ResourceManager.GetString("STRChargeNeed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Battery is High Level, Please disconnect from Adapter.
-        /// </summary>
-        internal static string STRChargeUnneed {
-            get {
-                return ResourceManager.GetString("STRChargeUnneed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Charging .
-        /// </summary>
-        internal static string STRCharging {
-            get {
-                return ResourceManager.GetString("STRCharging", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid Data.
-        /// </summary>
-        internal static string STRInvalidData {
-            get {
-                return ResourceManager.GetString("STRInvalidData", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Maximum Charge for disconnect from Adapter.
-        /// </summary>
-        internal static string STRMaxCharge {
-            get {
-                return ResourceManager.GetString("STRMaxCharge", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Minimum Charge for connect to  Adapter.
-        /// </summary>
-        internal static string STRMinCharge {
-            get {
-                return ResourceManager.GetString("STRMinCharge", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to % Remaining.
-        /// </summary>
-        internal static string STRRemaining {
-            get {
-                return ResourceManager.GetString("STRRemaining", resourceCulture);
             }
         }
     }

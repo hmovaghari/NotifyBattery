@@ -136,34 +136,4 @@
   <data name="BatteryF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BatteryF.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CreatedBY" xml:space="preserve">
-    <value>Created by hmovaghari↵http://hmovaghari.rozblog.com</value>
-  </data>
-  <data name="STRActionFUN" xml:space="preserve">
-    <value>Action Function when disconnect from Adapter</value>
-  </data>
-  <data name="STRAppName" xml:space="preserve">
-    <value>NotifyBattery</value>
-  </data>
-  <data name="STRChargeNeed" xml:space="preserve">
-    <value>Battery is Low Level, Please connect to Adapter</value>
-  </data>
-  <data name="STRChargeUnneed" xml:space="preserve">
-    <value>Battery is High Level, Please disconnect from Adapter</value>
-  </data>
-  <data name="STRCharging" xml:space="preserve">
-    <value>Charging </value>
-  </data>
-  <data name="STRInvalidData" xml:space="preserve">
-    <value>Invalid Data</value>
-  </data>
-  <data name="STRMaxCharge" xml:space="preserve">
-    <value>Maximum Charge for disconnect from Adapter</value>
-  </data>
-  <data name="STRMinCharge" xml:space="preserve">
-    <value>Minimum Charge for connect to  Adapter</value>
-  </data>
-  <data name="STRRemaining" xml:space="preserve">
-    <value>% Remaining</value>
-  </data>
 </root>

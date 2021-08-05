@@ -1,6 +1,6 @@
 ﻿namespace NotifyBattery
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            this.menu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.windowsMobilityCenterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.powerOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.contextMenuStrip1.SuspendLayout();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // contextMenuStrip1
+            // menu
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.windowsMobilityCenterToolStripMenuItem,
             this.powerOptionsToolStripMenuItem,
             this.settingsToolStripMenuItem,
             this.aboutToolStripMenuItem,
             this.exitToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(209, 136);
+            this.menu.Name = "contextMenuStrip1";
+            this.menu.Size = new System.Drawing.Size(209, 114);
             // 
             // windowsMobilityCenterToolStripMenuItem
             // 
@@ -87,37 +87,39 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // timer1
+            // timer
             // 
-            this.timer1.Enabled = true;
+            this.timer.Enabled = true;
             // 
-            // notifyIcon1
+            // notifyIcon
             // 
-            this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "NotifyBattery";
-            this.notifyIcon1.Visible = true;
+            this.notifyIcon.ContextMenuStrip = this.menu;
+            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
+            this.notifyIcon.Text = "NotifyBattery";
+            this.notifyIcon.Visible = true;
             // 
-            // Form1
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(308, 261);
+            this.ClientSize = new System.Drawing.Size(308, 305);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "frmMain";
             this.ShowInTaskbar = false;
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.Text = "NotifyBattery";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.Load += new System.EventHandler(this.frmMain_Load);
+            this.menu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.ContextMenuStrip menu;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.ToolStripMenuItem windowsMobilityCenterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem powerOptionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;

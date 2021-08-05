@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("NotifyBattery")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Notify Battery Level Tools")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("hmovaghari")]
 [assembly: AssemblyProduct("NotifyBattery")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCopyright("Copyright ©  2018 hmovaghari")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -8,16 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NotifyBattery.Properties;
 
 namespace NotifyBattery
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
         private int levelcharge = 100;
         DialogResult result = DialogResult.Yes;
         private bool showMessages = true;
 
-        public Form1()
+        public frmMain()
         {
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.None;
@@ -31,14 +32,14 @@ namespace NotifyBattery
             set { base.BackColor = value; }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void frmMain_Load(object sender, EventArgs e)
         {
-            this.Text = Properties.Resources.STRAppName;
-            timer1.Interval = 250;
-            timer1.Tick += Timer1_Tick;
+            Size = new Size(0, 0);
+            timer.Interval = 250;
+            timer.Tick += Timer_Tick;
         }
 
-        private void Timer1_Tick(object sender, EventArgs e)
+        private void Timer_Tick(object sender, EventArgs e)
         {
             //throw new NotImplementedException();
             float levelBattery = SystemInformation.PowerStatus.BatteryLifePercent * 100;
@@ -46,53 +47,57 @@ namespace NotifyBattery
             bool isRunningOnBattery = (System.Windows.Forms.SystemInformation.PowerStatus.PowerLineStatus ==
                                        PowerLineStatus.Offline);
             checkCharge(chargeBattery, levelBattery, isRunningOnBattery);
-            notifyIcon1.Icon = PIcon(levelBattery, chargeBattery, levelcharge, isRunningOnBattery);
+            notifyIcon.Icon = PIcon(levelBattery, chargeBattery, levelcharge, isRunningOnBattery);
+
+            notifyIcon.Text = string.Empty;
             if (chargeBattery.Contains("Charging"))
             {
                 levelcharge = levelCharge(levelcharge);
-                notifyIcon1.Text = Properties.Resources.STRCharging +
-                                   SystemInformation.PowerStatus.BatteryLifePercent * 100 +
-                                   Properties.Resources.STRRemaining;
+                notifyIcon.Text = "Charging ";
             }
-            else
-            {
-                notifyIcon1.Text = SystemInformation.PowerStatus.BatteryLifePercent * 100 +
-                                   Properties.Resources.STRRemaining;
-            }
+            notifyIcon.Text += SystemInformation.PowerStatus.BatteryLifePercent * 100;
+            notifyIcon.Text += "% Remaining";
         }
 
         private void checkCharge(string chargeBattery, float levelBattery, bool isRunningOnBattery)
         {
             if (showMessages)
             {
-                if (levelBattery >= Properties.Settings.Default.maxCharge)
+                if (levelBattery >= Settings.Default.maxCharge)
                 {
-                    if (chargeBattery.Contains("Charging"))
+                    if (Settings.Default.isNotifityMaxCharge)
                     {
-                        showMessages = false;
-                        //result = MessageBox.Show( ... MessageBoxOptions.DefaultDesktopOnly);
-                        result = MessageBox.Show(Properties.Resources.STRChargeUnneed, this.Text, MessageBoxButtons.OK,
-                            MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1,
-                            MessageBoxOptions.ServiceNotification);
-                    }
-                    if (!isRunningOnBattery)
-                    {
-                        showMessages = false;
-                        //result = MessageBox.Show( ... MessageBoxOptions.DefaultDesktopOnly);
-                        result = MessageBox.Show(Properties.Resources.STRChargeUnneed, this.Text, MessageBoxButtons.OK,
-                            MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1,
-                            MessageBoxOptions.ServiceNotification);
+                        var chargeUnneed = "Battery is High Level, Please disconnect from Adapter";
+                        if (chargeBattery.Contains("Charging"))
+                        {
+                            showMessages = false;
+                            //result = MessageBox.Show( ... MessageBoxOptions.DefaultDesktopOnly);
+                            result = MessageBox.Show(chargeUnneed, Text, MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1,
+                                MessageBoxOptions.ServiceNotification);
+                        }
+                        if (!isRunningOnBattery)
+                        {
+                            showMessages = false;
+                            //result = MessageBox.Show( ... MessageBoxOptions.DefaultDesktopOnly);
+                            result = MessageBox.Show(chargeUnneed, Text, MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1,
+                                MessageBoxOptions.ServiceNotification);
+                        }
                     }
                 }
-                else if (levelBattery <= Properties.Settings.Default.minCharge)
+                else if (levelBattery <= Settings.Default.minCharge)
                 {
-                    if (!chargeBattery.Contains("Charging"))
+                    if (Settings.Default.isNotifityMinCharge)
                     {
-                        showMessages = false;
-                        //result = MessageBox.Show( ... MessageBoxOptions.DefaultDesktopOnly);
-                        result = MessageBox.Show(Properties.Resources.STRChargeNeed, this.Text, MessageBoxButtons.OK,
-                            MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1,
-                            MessageBoxOptions.ServiceNotification);
+                        if (!chargeBattery.Contains("Charging"))
+                        {
+                            showMessages = false;
+                            //result = MessageBox.Show( ... MessageBoxOptions.DefaultDesktopOnly);
+                            result = MessageBox.Show("Battery is Low Level, Please connect to Adapter",
+                                Text, MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1,
+                                MessageBoxOptions.ServiceNotification);
+                        }
                     }
                 }
             }
@@ -125,11 +130,11 @@ namespace NotifyBattery
         {
             if (chargeBattery == "High, Charging")
             {
-                return Properties.Resources.BatteryF;
+                return Resources.BatteryF;
             }
             if (chargeBattery == "High" && !isRunningOnBattery)
             {
-                return Properties.Resources.BatteryF;
+                return Resources.BatteryF;
             }
             if (chargeBattery == "Charging")
             {
@@ -137,17 +142,17 @@ namespace NotifyBattery
             }
             if (levelBattery >= 75)
             {
-                return Properties.Resources.Battery3;
+                return Resources.Battery3;
             }
             if (levelBattery >= 50)
             {
-                return Properties.Resources.Battery2;
+                return Resources.Battery2;
             }
             if (levelBattery >= 25)
             {
-                return Properties.Resources.Battery1;
+                return Resources.Battery1;
             }
-            return Properties.Resources.Battery0;
+            return Resources.Battery0;
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -157,9 +162,10 @@ namespace NotifyBattery
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string message = Properties.Resources.CreatedBY;
+            string message = "Created by hmovaghari↵http://hmovaghari.rozblog.com";
             message = message.Replace("↵", "\n");
-            MessageBox.Show(message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification);
+            MessageBox.Show(message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification);
         }
 
         private void windowsMobilityCenterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -177,7 +183,7 @@ namespace NotifyBattery
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            frmSettings form2 = new frmSettings();
             form2.ShowDialog();
         }
     }

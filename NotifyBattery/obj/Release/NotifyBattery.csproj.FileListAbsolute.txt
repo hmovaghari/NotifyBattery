@@ -1,20 +1,10 @@
-c:\users\hmovaghari\documents\visual studio 2015\Projects\NotifyBattery\NotifyBattery\bin\Release\NotifyBattery.exe.config
-c:\users\hmovaghari\documents\visual studio 2015\Projects\NotifyBattery\NotifyBattery\bin\Release\NotifyBattery.exe
-c:\users\hmovaghari\documents\visual studio 2015\Projects\NotifyBattery\NotifyBattery\bin\Release\NotifyBattery.pdb
-c:\users\hmovaghari\documents\visual studio 2015\Projects\NotifyBattery\NotifyBattery\obj\Release\NotifyBattery.Form1.resources
-c:\users\hmovaghari\documents\visual studio 2015\Projects\NotifyBattery\NotifyBattery\obj\Release\NotifyBattery.Form2.resources
-c:\users\hmovaghari\documents\visual studio 2015\Projects\NotifyBattery\NotifyBattery\obj\Release\NotifyBattery.Properties.Resources.resources
-c:\users\hmovaghari\documents\visual studio 2015\Projects\NotifyBattery\NotifyBattery\obj\Release\NotifyBattery.csproj.GenerateResource.Cache
-c:\users\hmovaghari\documents\visual studio 2015\Projects\NotifyBattery\NotifyBattery\obj\Release\NotifyBattery.exe
-c:\users\hmovaghari\documents\visual studio 2015\Projects\NotifyBattery\NotifyBattery\obj\Release\NotifyBattery.pdb
-C:\Users\hmovaghari\Documents\Visual Studio 2015\Projects\NotifyBattery\NotifyBattery\obj\Release\NotifyBattery.csprojResolveAssemblyReference.cache
 D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\bin\Release\NotifyBattery.exe.config
 D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\bin\Release\NotifyBattery.exe
 D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\bin\Release\NotifyBattery.pdb
-D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\obj\Release\NotifyBattery.csprojAssemblyReference.cache
-D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\obj\Release\NotifyBattery.Form1.resources
-D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\obj\Release\NotifyBattery.Form2.resources
+D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\obj\Release\NotifyBattery.frmMain.resources
+D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\obj\Release\NotifyBattery.frmSettings.resources
 D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\obj\Release\NotifyBattery.Properties.Resources.resources
 D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\obj\Release\NotifyBattery.csproj.GenerateResource.cache
+D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\obj\Release\NotifyBattery.csproj.CoreCompileInputs.cache
 D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\obj\Release\NotifyBattery.exe
 D:\Movaghari\Source\C#\NotifyBattery\NotifyBattery\obj\Release\NotifyBattery.pdb
