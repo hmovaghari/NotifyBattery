@@ -339,3 +339,10 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 /NotifyBattery/obj/Debug/TempPE/Properties.Resources.Designer.cs.dll
+/NotifyBattery/bin/Debug/NotifyBattery.exe
+/NotifyBattery/bin/Debug/NotifyBattery.exe.config
+/NotifyBattery/bin/Debug/NotifyBattery.pdb
+/NotifyBattery/obj/Debug/NotifyBattery.csproj.FileListAbsolute.txt
+/NotifyBattery/obj/Debug/NotifyBattery.csproj.GenerateResource.Cache
+/NotifyBattery/obj/Debug/NotifyBattery.exe
+/NotifyBattery/obj/Debug/NotifyBattery.pdb
